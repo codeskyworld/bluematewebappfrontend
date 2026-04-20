@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HotDoc – Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #E8EDF5;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 20px;
+    }
+    .phone {
+      width: 390px;
+      min-height: 844px;
+      background: #F4F7FC;
+      border-radius: 44px;
+      overflow: hidden;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.22), 0 0 0 1px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Status Bar */
+    .status-bar {
+      height: 62px;
+      background: #1A6EFF;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 24px;
+      flex-shrink: 0;
+    }
+    .status-time { color: #fff; font-size: 17px; font-weight: 600; }
+    .status-icons { display: flex; gap: 6px; align-items: center; color: #fff; }
+
+    /* Content */
+    .content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* Greeting */
+    .greeting-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .greeting-sub { color: #6B7280; font-size: 13px; }
+    .greeting-name { color: #1A2138; font-size: 22px; font-weight: 700; margin-top: 3px; }
+    .bell-btn {
+      width: 40px; height: 40px;
+      background: #EBF3FF;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+    }
+
+    /* Location */
+    .location-row {
+      display: flex; align-items: center; gap: 6px;
+      color: #4B5563; font-size: 13px; font-weight: 500;
+      cursor: pointer;
+    }
+    .location-row svg { flex-shrink: 0; }
+
+    /* Search */
+    .search-bar {
+      display: flex; align-items: center; gap: 10px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 0 14px;
+      height: 48px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .search-placeholder { flex: 1; color: #9CA3AF; font-size: 14px; }
+
+    /* Categories */
+    .categories {
+      display: flex; gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 2px;
+      scrollbar-width: none;
+    }
+    .categories::-webkit-scrollbar { display: none; }
+    .cat-chip {
+      display: flex; align-items: center; gap: 6px;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      white-space: nowrap;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .cat-chip.active { background: #1A6EFF; color: #fff; font-weight: 600; }
+    .cat-chip.inactive { background: #fff; color: #4B5563; }
+    .cat-chip.inactive svg { color: #6B7280; }
+
+    /* Section header */
+    .section-header {
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .section-title { color: #1A2138; font-size: 18px; font-weight: 700; }
+    .section-link { color: #1A6EFF; font-size: 14px; font-weight: 500; cursor: pointer; }
+
+    /* Doctor card */
+    .doctor-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 14px;
+      display: flex;
+      gap: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .doctor-card:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+    .avatar {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; font-weight: 700;
+      flex-shrink: 0;
+    }
+    .avatar.blue { background: #EBF3FF; color: #1A6EFF; }
+    .avatar.yellow { background: #FEF3C7; color: #D97706; }
+    .avatar.green { background: #DCFCE7; color: #16A34A; }
+    .doc-info { flex: 1; display: flex; flex-direction: column; gap: 5px; }
+    .doc-name { color: #1A2138; font-size: 16px; font-weight: 700; }
+    .doc-specialty { color: #6B7280; font-size: 13px; }
+    .rating-row { display: flex; align-items: center; gap: 4px; font-size: 12px; color: #4B5563; }
+    .star-icon { color: #F59E0B; }
+    .avail-col { display: flex; flex-direction: column; gap: 6px; align-items: flex-end; flex-shrink: 0; }
+    .avail-badge {
+      background: #DCFCE7; color: #16A34A;
+      font-size: 11px; font-weight: 600;
+      padding: 4px 8px; border-radius: 10px;
+    }
+    .avail-time { color: #1A6EFF; font-size: 12px; font-weight: 500; }
+
+    /* Bottom Tab Bar */
+    .tab-bar {
+      padding: 12px 21px 21px;
+      background: #F4F7FC;
+      flex-shrink: 0;
+    }
+    .pill {
+      display: flex;
+      height: 62px;
+      background: #fff;
+      border-radius: 36px;
+      border: 1px solid #E5E7EB;
+      padding: 4px;
+      gap: 2px;
+    }
+    .tab-item {
+      flex: 1;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 4px;
+      border-radius: 26px;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .tab-item.active { background: #1A6EFF; }
+    .tab-item.active svg, .tab-item.active .tab-label { color: #fff; }
+    .tab-item.inactive svg, .tab-item.inactive .tab-label { color: #9CA3AF; }
+    .tab-label { font-size: 10px; font-weight: 600; letter-spacing: 0.5px; }
+  </style>
+</head>
+<body>
+  <div class="phone">
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+      <span class="status-time">9:41</span>
+      <div class="status-icons">
+        <i data-lucide="signal" width="16" height="16"></i>
+        <i data-lucide="wifi" width="16" height="16"></i>
+        <i data-lucide="battery" width="22" height="16"></i>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+      <!-- Greeting -->
+      <div class="greeting-row">
+        <div>
+          <div class="greeting-sub">Good morning</div>
+          <div class="greeting-name">Sarah Johnson</div>
+        </div>
+        <div class="bell-btn">
+          <i data-lucide="bell" width="20" height="20" color="#1A6EFF"></i>
+        </div>
+      </div>
+
+      <!-- Location -->
+      <div class="location-row">
+        <i data-lucide="map-pin" width="14" height="14" color="#1A6EFF"></i>
+        <span>Melbourne, VIC</span>
+        <i data-lucide="chevron-down" width="14" height="14" color="#9CA3AF"></i>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <i data-lucide="search" width="18" height="18" color="#9CA3AF"></i>
+        <span class="search-placeholder">Search doctors, clinics...</span>
+        <i data-lucide="sliders-horizontal" width="18" height="18" color="#1A6EFF"></i>
+      </div>
+
+      <!-- Categories -->
+      <div class="categories">
+        <div class="cat-chip active">
+          <i data-lucide="stethoscope" width="14" height="14"></i>
+          GP
+        </div>
+        <div class="cat-chip inactive">
+          <i data-lucide="heart-pulse" width="14" height="14"></i>
+          Specialist
+        </div>
+        <div class="cat-chip inactive">
+          <i data-lucide="smile" width="14" height="14"></i>
+          Dental
+        </div>
+        <div class="cat-chip inactive">
+          <i data-lucide="brain" width="14" height="14"></i>
+          Mental
+        </div>
+        <div class="cat-chip inactive">
+          <i data-lucide="activity" width="14" height="14"></i>
+          Physio
+        </div>
+      </div>
+
+      <!-- Section Header -->
+      <div class="section-header">
+        <span class="section-title">Nearby Doctors</span>
+        <span class="section-link">See all →</span>
+      </div>
+
+      <!-- Doctor Card 1 -->
+      <div class="doctor-card" onclick="window.location='hotdoc-doctor-profile.html'">
+        <div class="avatar blue">JW</div>
+        <div class="doc-info">
+          <div class="doc-name">Dr. James Wilson</div>
+          <div class="doc-specialty">General Practitioner</div>
+          <div class="rating-row">
+            <i data-lucide="star" width="12" height="12" class="star-icon" fill="#F59E0B" color="#F59E0B"></i>
+            <span>4.9 &nbsp;(142 reviews)</span>
+          </div>
+        </div>
+        <div class="avail-col">
+          <span class="avail-badge">Available</span>
+          <span class="avail-time">Today 3:00 PM</span>
+        </div>
+      </div>
+
+      <!-- Doctor Card 2 -->
+      <div class="doctor-card">
+        <div class="avatar yellow">AP</div>
+        <div class="doc-info">
+          <div class="doc-name">Dr. Amy Park</div>
+          <div class="doc-specialty">Cardiologist</div>
+          <div class="rating-row">
+            <i data-lucide="star" width="12" height="12" class="star-icon" fill="#F59E0B" color="#F59E0B"></i>
+            <span>4.8 &nbsp;(98 reviews)</span>
+          </div>
+        </div>
+        <div class="avail-col">
+          <span class="avail-badge">Available</span>
+          <span class="avail-time">Tomorrow 9:30 AM</span>
+        </div>
+      </div>
+
+      <!-- Doctor Card 3 -->
+      <div class="doctor-card">
+        <div class="avatar green">ML</div>
+        <div class="doc-info">
+          <div class="doc-name">Dr. Michael Lee</div>
+          <div class="doc-specialty">Dermatologist</div>
+          <div class="rating-row">
+            <i data-lucide="star" width="12" height="12" class="star-icon" fill="#F59E0B" color="#F59E0B"></i>
+            <span>4.7 &nbsp;(63 reviews)</span>
+          </div>
+        </div>
+        <div class="avail-col">
+          <span class="avail-badge">Available</span>
+          <span class="avail-time">Wed 10:00 AM</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Tab Bar -->
+    <div class="tab-bar">
+      <div class="pill">
+        <div class="tab-item active">
+          <i data-lucide="house" width="18" height="18"></i>
+          <span class="tab-label">HOME</span>
+        </div>
+        <div class="tab-item inactive">
+          <i data-lucide="search" width="18" height="18"></i>
+          <span class="tab-label">SEARCH</span>
+        </div>
+        <div class="tab-item inactive" onclick="window.location='hotdoc-doctor-profile.html'">
+          <i data-lucide="calendar" width="18" height="18"></i>
+          <span class="tab-label">APPTS</span>
+        </div>
+        <div class="tab-item inactive">
+          <i data-lucide="user" width="18" height="18"></i>
+          <span class="tab-label">PROFILE</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

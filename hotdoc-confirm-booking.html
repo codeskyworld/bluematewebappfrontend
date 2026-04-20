@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HotDoc – Confirm Booking</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #E8EDF5;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 20px;
+    }
+    .phone {
+      width: 390px;
+      min-height: 844px;
+      background: #F4F7FC;
+      border-radius: 44px;
+      overflow: hidden;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.22), 0 0 0 1px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Status Bar */
+    .status-bar {
+      height: 62px;
+      background: #1A6EFF;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      flex-shrink: 0;
+    }
+    .status-back { display: flex; align-items: center; gap: 6px; color: #fff; cursor: pointer; font-size: 15px; }
+    .status-title { color: #fff; font-size: 17px; font-weight: 700; }
+    .status-time { color: #fff; font-size: 15px; font-weight: 600; }
+
+    /* Content */
+    .content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    /* Progress Steps */
+    .steps {
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+    .step-dot {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: #1A6EFF;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 13px; font-weight: 700;
+      flex-shrink: 0;
+    }
+    .step-dot.current { box-shadow: 0 0 0 3px #fff, 0 0 0 5px #1A6EFF; }
+    .step-line { flex: 1; height: 2px; background: #1A6EFF; }
+
+    /* Doctor Summary */
+    .doc-summary {
+      background: #fff;
+      border-radius: 14px;
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    .sm-avatar {
+      width: 48px; height: 48px;
+      background: #EBF3FF;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #1A6EFF; font-size: 16px; font-weight: 700;
+      flex-shrink: 0;
+    }
+    .doc-sum-info { flex: 1; }
+    .doc-sum-name { color: #1A2138; font-size: 15px; font-weight: 700; }
+    .doc-sum-spec { color: #6B7280; font-size: 13px; margin-top: 2px; }
+    .doc-sum-loc {
+      display: flex; align-items: center; gap: 4px;
+      color: #9CA3AF; font-size: 12px; margin-top: 3px;
+    }
+
+    /* Appointment Details Card */
+    .appt-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    .appt-title { color: #1A2138; font-size: 15px; font-weight: 700; }
+    .detail-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .detail-icon {
+      width: 32px; height: 32px;
+      background: #EBF3FF;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .detail-text { color: #1A2138; font-size: 14px; font-weight: 500; }
+
+    /* Form section */
+    .form-section { display: flex; flex-direction: column; gap: 8px; }
+    .form-label { color: #1A2138; font-size: 15px; font-weight: 700; }
+    .selector {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      border: 1px solid #E5E7EB;
+      border-radius: 12px;
+      padding: 0 14px;
+      height: 48px;
+      cursor: pointer;
+    }
+    .selector-text { color: #1A2138; font-size: 14px; }
+
+    /* Patient card */
+    .patient-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .patient-avatar {
+      width: 44px; height: 44px;
+      background: #1A6EFF;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 15px; font-weight: 700;
+      flex-shrink: 0;
+    }
+    .patient-name { color: #1A2138; font-size: 15px; font-weight: 600; }
+    .patient-dob { color: #9CA3AF; font-size: 13px; margin-top: 2px; }
+
+    /* Confirm Button */
+    .confirm-btn {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%; height: 52px;
+      background: #1A6EFF;
+      border: none; border-radius: 14px;
+      color: #fff; font-size: 16px; font-weight: 700;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: background 0.15s, transform 0.1s;
+    }
+    .confirm-btn:hover { background: #1558CC; transform: translateY(-1px); }
+    .confirm-btn:active { transform: translateY(0); }
+
+    /* Success overlay (hidden by default) */
+    .success-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+    }
+    .success-overlay.show { display: flex; }
+    .success-modal {
+      background: #fff;
+      border-radius: 24px;
+      padding: 36px 28px;
+      width: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      text-align: center;
+    }
+    .success-icon {
+      width: 64px; height: 64px;
+      background: #DCFCE7;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .success-title { color: #1A2138; font-size: 20px; font-weight: 700; }
+    .success-sub { color: #6B7280; font-size: 14px; line-height: 1.5; }
+    .success-close {
+      width: 100%; height: 48px;
+      background: #1A6EFF; border: none; border-radius: 12px;
+      color: #fff; font-size: 15px; font-weight: 600;
+      cursor: pointer; margin-top: 8px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .terms-text {
+      color: #9CA3AF; font-size: 11px;
+      text-align: center; line-height: 1.6;
+    }
+
+    /* Bottom Tab Bar */
+    .tab-bar { padding: 12px 21px 21px; background: #F4F7FC; flex-shrink: 0; }
+    .pill {
+      display: flex; height: 62px;
+      background: #fff; border-radius: 36px;
+      border: 1px solid #E5E7EB; padding: 4px; gap: 2px;
+    }
+    .tab-item {
+      flex: 1; display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 4px; border-radius: 26px; cursor: pointer;
+    }
+    .tab-item.active { background: #1A6EFF; }
+    .tab-item.active svg, .tab-item.active .tab-label { color: #fff; }
+    .tab-item.inactive svg, .tab-item.inactive .tab-label { color: #9CA3AF; }
+    .tab-label { font-size: 10px; font-weight: 600; letter-spacing: 0.5px; }
+  </style>
+</head>
+<body>
+  <div class="phone">
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+      <div class="status-back" onclick="window.location='hotdoc-doctor-profile.html'">
+        <i data-lucide="arrow-left" width="20" height="20"></i>
+        Back
+      </div>
+      <span class="status-title">Confirm Booking</span>
+      <span class="status-time">9:41</span>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+      <!-- Progress Steps -->
+      <div class="steps">
+        <div class="step-dot">1</div>
+        <div class="step-line"></div>
+        <div class="step-dot">2</div>
+        <div class="step-line"></div>
+        <div class="step-dot current">3</div>
+      </div>
+
+      <!-- Doctor Summary -->
+      <div class="doc-summary">
+        <div class="sm-avatar">JW</div>
+        <div class="doc-sum-info">
+          <div class="doc-sum-name">Dr. James Wilson</div>
+          <div class="doc-sum-spec">General Practitioner</div>
+          <div class="doc-sum-loc">
+            <i data-lucide="map-pin" width="12" height="12"></i>
+            Collins St Medical, Melbourne
+          </div>
+        </div>
+      </div>
+
+      <!-- Appointment Details -->
+      <div class="appt-card">
+        <div class="appt-title">Appointment Details</div>
+        <div class="detail-row">
+          <div class="detail-icon">
+            <i data-lucide="calendar" width="16" height="16" color="#1A6EFF"></i>
+          </div>
+          <span class="detail-text">Sunday, 20 April 2025</span>
+        </div>
+        <div class="detail-row">
+          <div class="detail-icon">
+            <i data-lucide="timer" width="16" height="16" color="#1A6EFF"></i>
+          </div>
+          <span class="detail-text">10:00 AM – 10:30 AM</span>
+        </div>
+        <div class="detail-row">
+          <div class="detail-icon">
+            <i data-lucide="map-pin" width="16" height="16" color="#1A6EFF"></i>
+          </div>
+          <span class="detail-text">Collins St Medical, Melbourne VIC</span>
+        </div>
+        <div class="detail-row">
+          <div class="detail-icon">
+            <i data-lucide="user" width="16" height="16" color="#1A6EFF"></i>
+          </div>
+          <span class="detail-text">In-person consultation</span>
+        </div>
+      </div>
+
+      <!-- Reason for Visit -->
+      <div class="form-section">
+        <div class="form-label">Reason for Visit</div>
+        <div class="selector">
+          <span class="selector-text">General checkup</span>
+          <i data-lucide="chevron-down" width="16" height="16" color="#9CA3AF"></i>
+        </div>
+      </div>
+
+      <!-- Patient -->
+      <div class="form-section">
+        <div class="form-label">Patient</div>
+        <div class="patient-card">
+          <div class="patient-avatar">SJ</div>
+          <div>
+            <div class="patient-name">Sarah Johnson</div>
+            <div class="patient-dob">DOB: 15 March 1990</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Confirm Button -->
+      <button class="confirm-btn" onclick="document.getElementById('successOverlay').classList.add('show')">
+        <i data-lucide="circle-check" width="20" height="20"></i>
+        Confirm Appointment
+      </button>
+
+      <p class="terms-text">By confirming, you agree to our cancellation policy.<br>You can cancel up to 2 hours before your appointment.</p>
+
+    </div>
+
+    <!-- Bottom Tab Bar -->
+    <div class="tab-bar">
+      <div class="pill">
+        <div class="tab-item inactive" onclick="window.location='hotdoc-home.html'">
+          <i data-lucide="house" width="18" height="18"></i>
+          <span class="tab-label">HOME</span>
+        </div>
+        <div class="tab-item inactive">
+          <i data-lucide="search" width="18" height="18"></i>
+          <span class="tab-label">SEARCH</span>
+        </div>
+        <div class="tab-item active">
+          <i data-lucide="calendar" width="18" height="18"></i>
+          <span class="tab-label">APPTS</span>
+        </div>
+        <div class="tab-item inactive">
+          <i data-lucide="user" width="18" height="18"></i>
+          <span class="tab-label">PROFILE</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Success Modal -->
+  <div class="success-overlay" id="successOverlay">
+    <div class="success-modal">
+      <div class="success-icon">
+        <i data-lucide="circle-check" width="32" height="32" color="#16A34A"></i>
+      </div>
+      <div class="success-title">Booking Confirmed!</div>
+      <div class="success-sub">
+        Your appointment with Dr. James Wilson is confirmed for <strong>Sunday, 20 April at 10:00 AM</strong>.
+        A confirmation has been sent to your email.
+      </div>
+      <button class="success-close" onclick="window.location='hotdoc-home.html'">Back to Home</button>
+    </div>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>
