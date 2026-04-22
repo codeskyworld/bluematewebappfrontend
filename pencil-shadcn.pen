@@ -3545,7 +3545,7 @@
                   "type": "ref",
                   "ref": "C3KOZ",
                   "x": 24,
-                  "y": 24.01994370166805,
+                  "y": 24.019943701668048,
                   "width": "fill_container",
                   "descendants": {
                     "NEMHS": {
@@ -4518,6 +4518,7 @@
       "id": "QGYHK",
       "x": 3053,
       "y": 2320.9999999999995,
+      "name": "Prompt",
       "model": "cursor-composer",
       "width": 400,
       "height": 219,
