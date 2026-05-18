@@ -5454,7 +5454,7 @@
       "id": "BL6pi",
       "x": 656,
       "y": -3731,
-      "name": "Calendar Picker CN",
+      "name": "日期选择 CN",
       "clip": true,
       "width": 390,
       "height": 844,
@@ -19319,7 +19319,7 @@
       "name": "新建任务 CN",
       "clip": true,
       "width": 390,
-      "height": 844,
+      "height": 950,
       "fill": "#F5F3EE",
       "cornerRadius": 40,
       "stroke": {
@@ -19400,7 +19400,7 @@
           "y": 62,
           "name": "Content",
           "width": 390,
-          "height": 782,
+          "height": 841,
           "fill": "#00000000",
           "layout": "vertical",
           "children": [
@@ -19534,7 +19534,7 @@
                   "id": "WshIB",
                   "name": "descInput",
                   "width": "fill_container",
-                  "height": 80,
+                  "height": 60,
                   "fill": "#FFFFFF",
                   "cornerRadius": 16,
                   "stroke": {
@@ -19553,6 +19553,253 @@
                       "name": "descPH",
                       "fill": "#C8C3BB",
                       "content": "描述",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "v7MUrb",
+              "name": "Schedule Section",
+              "width": "fill_container",
+              "fill": "#F5F3EE",
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "N2Runx",
+                  "name": "schedLabel",
+                  "fill": "#1F1D1A",
+                  "content": "开工时间",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "iddRL",
+                  "name": "dateInput",
+                  "width": "fill_container",
+                  "height": 56,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 16,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#E5DFD4"
+                  },
+                  "gap": 12,
+                  "padding": [
+                    0,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "qwifu",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "calendar",
+                      "iconFontFamily": "lucide",
+                      "fill": "#1E6CF2"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "MxVBe",
+                      "name": "dateTxt",
+                      "width": "fill_container",
+                      "fill": "#00000000",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "PQGRw",
+                          "name": "dateLabel",
+                          "fill": "#6F6A63",
+                          "content": "日期",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "CMT8Z",
+                          "name": "dateValue",
+                          "fill": "#1F1D1A",
+                          "content": "未安排",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "brCxy",
+                      "width": 16,
+                      "height": 16,
+                      "iconFontName": "chevron-right",
+                      "iconFontFamily": "lucide",
+                      "fill": "#C8C3BB"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "K0u099",
+                  "name": "timeInput",
+                  "width": "fill_container",
+                  "height": 56,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 16,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#E5DFD4"
+                  },
+                  "gap": 12,
+                  "padding": [
+                    0,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "Ow1iY",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "timer",
+                      "iconFontFamily": "lucide",
+                      "fill": "#1E6CF2"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "pRlPu",
+                      "name": "timeTxt",
+                      "width": "fill_container",
+                      "fill": "#00000000",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "tVxFe",
+                          "name": "timeLabel",
+                          "fill": "#6F6A63",
+                          "content": "时间",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "A2ckY0",
+                          "name": "timeValue",
+                          "fill": "#1F1D1A",
+                          "content": "未安排",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "a7Tt2Y",
+                      "width": 16,
+                      "height": 16,
+                      "iconFontName": "chevron-right",
+                      "iconFontFamily": "lucide",
+                      "fill": "#C8C3BB"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "pfnUr",
+              "name": "Location Section",
+              "width": "fill_container",
+              "fill": "#F5F3EE",
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ypD2N",
+                  "name": "locHeader",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "oK0n5",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "map-pin",
+                      "iconFontFamily": "lucide",
+                      "fill": "#1F1D1A"
+                    },
+                    {
+                      "type": "text",
+                      "id": "c33bq",
+                      "name": "locLabel",
+                      "fill": "#1F1D1A",
+                      "content": "施工地点",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "aST9B",
+                  "name": "locInput",
+                  "width": "fill_container",
+                  "height": 52,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 16,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#E5DFD4"
+                  },
+                  "gap": 10,
+                  "padding": [
+                    0,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "WQAfi",
+                      "width": 16,
+                      "height": 16,
+                      "iconFontName": "map-pin",
+                      "iconFontFamily": "lucide",
+                      "fill": "#C8C3BB"
+                    },
+                    {
+                      "type": "text",
+                      "id": "H2cYH",
+                      "name": "locPH",
+                      "fill": "#C8C3BB",
+                      "content": "施工地点",
                       "fontFamily": "Inter",
                       "fontSize": 15,
                       "fontWeight": "normal"
@@ -19681,47 +19928,6 @@
                 },
                 {
                   "type": "frame",
-                  "id": "sJ9Zb",
-                  "name": "addrInput",
-                  "width": "fill_container",
-                  "height": 52,
-                  "fill": "#FFFFFF",
-                  "cornerRadius": 16,
-                  "stroke": {
-                    "align": "inside",
-                    "thickness": 1,
-                    "fill": "#E5DFD4"
-                  },
-                  "gap": 10,
-                  "padding": [
-                    0,
-                    16
-                  ],
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "icon_font",
-                      "id": "ilbhL",
-                      "width": 16,
-                      "height": 16,
-                      "iconFontName": "map-pin",
-                      "iconFontFamily": "lucide",
-                      "fill": "#C8C3BB"
-                    },
-                    {
-                      "type": "text",
-                      "id": "yRwMn",
-                      "name": "addrPH",
-                      "fill": "#C8C3BB",
-                      "content": "客户地址",
-                      "fontFamily": "Inter",
-                      "fontSize": 15,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
                   "id": "fRKfl",
                   "name": "mobileInput",
                   "width": "fill_container",
@@ -19764,36 +19970,58 @@
               ]
             },
             {
-              "type": "rectangle",
-              "id": "hqdVs",
-              "fill": "#E5DFD4",
-              "width": "fill_container",
-              "height": 1
-            },
-            {
               "type": "frame",
-              "id": "v7MUrb",
-              "name": "Schedule Section",
-              "width": "fill_container",
+              "id": "RaIhB",
+              "name": "Price Section",
+              "width": 392,
+              "height": 125,
               "fill": "#F5F3EE",
               "layout": "vertical",
               "gap": 8,
               "padding": 16,
               "children": [
                 {
-                  "type": "text",
-                  "id": "N2Runx",
-                  "name": "schedLabel",
-                  "fill": "#1F1D1A",
-                  "content": "日程",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "700"
+                  "type": "frame",
+                  "id": "ag0Xp",
+                  "name": "priceHeader",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "fSs9w",
+                      "width": 16,
+                      "height": 16,
+                      "iconFontName": "file-text",
+                      "iconFontFamily": "lucide",
+                      "fill": "#1F1D1A"
+                    },
+                    {
+                      "type": "text",
+                      "id": "GwJLl",
+                      "name": "priceLabel",
+                      "fill": "#1F1D1A",
+                      "content": "价格",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "YNKa7",
+                      "name": "hSpacer",
+                      "width": "fill_container",
+                      "height": 1,
+                      "fill": "#00000000"
+                    }
+                  ]
                 },
                 {
                   "type": "frame",
-                  "id": "iddRL",
-                  "name": "dateInput",
+                  "id": "vw6lp",
+                  "name": "priceCard",
                   "width": "fill_container",
                   "height": 56,
                   "fill": "#FFFFFF",
@@ -19812,47 +20040,26 @@
                   "children": [
                     {
                       "type": "icon_font",
-                      "id": "qwifu",
+                      "id": "TwieJ",
                       "width": 18,
                       "height": 18,
-                      "iconFontName": "calendar",
+                      "iconFontName": "file-text",
                       "iconFontFamily": "lucide",
-                      "fill": "#1E6CF2"
+                      "fill": "#C8C3BB"
                     },
                     {
-                      "type": "frame",
-                      "id": "MxVBe",
-                      "name": "dateTxt",
-                      "width": "fill_container",
-                      "fill": "#00000000",
-                      "layout": "vertical",
-                      "gap": 2,
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "PQGRw",
-                          "name": "dateLabel",
-                          "fill": "#6F6A63",
-                          "content": "日期",
-                          "fontFamily": "Inter",
-                          "fontSize": 11,
-                          "fontWeight": "500"
-                        },
-                        {
-                          "type": "text",
-                          "id": "CMT8Z",
-                          "name": "dateValue",
-                          "fill": "#1F1D1A",
-                          "content": "未安排",
-                          "fontFamily": "Inter",
-                          "fontSize": 14,
-                          "fontWeight": "600"
-                        }
-                      ]
+                      "type": "text",
+                      "id": "E0q0gO",
+                      "name": "pricePH",
+                      "fill": "#C8C3BB",
+                      "content": "点击添加价格",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
                     },
                     {
                       "type": "icon_font",
-                      "id": "brCxy",
+                      "id": "qtwGB",
                       "width": 16,
                       "height": 16,
                       "iconFontName": "chevron-right",
@@ -19864,50 +20071,36 @@
               ]
             },
             {
-              "type": "frame",
-              "id": "BvpCd",
-              "name": "spacer",
+              "type": "rectangle",
+              "id": "hqdVs",
+              "fill": "#E5DFD4",
               "width": "fill_container",
-              "height": "fill_container",
-              "fill": "#00000000"
-            },
+              "height": 1
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "TFHbc",
+          "x": 20,
+          "y": 867,
+          "name": "saveBtn",
+          "width": "fill_container(350)",
+          "height": 52,
+          "fill": "#1E6CF2",
+          "cornerRadius": 16,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
             {
-              "type": "frame",
-              "id": "oNIBG",
-              "name": "saveArea",
-              "width": "fill_container",
-              "fill": "#F5F3EE",
-              "padding": [
-                0,
-                20,
-                24,
-                20
-              ],
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "TFHbc",
-                  "name": "saveBtn",
-                  "width": "fill_container",
-                  "height": 52,
-                  "fill": "#1E6CF2",
-                  "cornerRadius": 16,
-                  "justifyContent": "center",
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "RRjR2",
-                      "name": "saveTxt",
-                      "fill": "#FFFFFF",
-                      "content": "保存",
-                      "fontFamily": "Inter",
-                      "fontSize": 16,
-                      "fontWeight": "600"
-                    }
-                  ]
-                }
-              ]
+              "type": "text",
+              "id": "RRjR2",
+              "name": "saveTxt",
+              "fill": "#FFFFFF",
+              "content": "保存",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "600"
             }
           ]
         }
@@ -19921,7 +20114,7 @@
       "name": "New Task EN",
       "clip": true,
       "width": 390,
-      "height": 844,
+      "height": 950,
       "fill": "#F5F3EE",
       "cornerRadius": 40,
       "stroke": {
@@ -20002,7 +20195,7 @@
           "y": 62,
           "name": "Content",
           "width": 390,
-          "height": 782,
+          "height": 888,
           "fill": "#00000000",
           "layout": "vertical",
           "children": [
@@ -20136,7 +20329,7 @@
                   "id": "ujqKD",
                   "name": "descInput",
                   "width": "fill_container",
-                  "height": 80,
+                  "height": 60,
                   "fill": "#FFFFFF",
                   "cornerRadius": 16,
                   "stroke": {
@@ -20155,6 +20348,253 @@
                       "name": "descPH",
                       "fill": "#C8C3BB",
                       "content": "Description",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "UUqvE",
+              "name": "Schedule Section",
+              "width": "fill_container",
+              "fill": "#F5F3EE",
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "fIiZm",
+                  "name": "schedLabel",
+                  "fill": "#1F1D1A",
+                  "content": "Start Time",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "Gjd6y",
+                  "name": "dateInput",
+                  "width": "fill_container",
+                  "height": 56,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 16,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#E5DFD4"
+                  },
+                  "gap": 12,
+                  "padding": [
+                    0,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "LF2UO",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "calendar",
+                      "iconFontFamily": "lucide",
+                      "fill": "#1E6CF2"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "n3AwFc",
+                      "name": "dateTxt",
+                      "width": "fill_container",
+                      "fill": "#00000000",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "CHRNE",
+                          "name": "dateLabel",
+                          "fill": "#6F6A63",
+                          "content": "Date",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "VpLaz",
+                          "name": "dateValue",
+                          "fill": "#1F1D1A",
+                          "content": "Unscheduled",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "B9hjR",
+                      "width": 16,
+                      "height": 16,
+                      "iconFontName": "chevron-right",
+                      "iconFontFamily": "lucide",
+                      "fill": "#C8C3BB"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ChnLL",
+                  "name": "timeInput",
+                  "width": "fill_container",
+                  "height": 56,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 16,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#E5DFD4"
+                  },
+                  "gap": 12,
+                  "padding": [
+                    0,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "IGVW0",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "timer",
+                      "iconFontFamily": "lucide",
+                      "fill": "#1E6CF2"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "L4bNo",
+                      "name": "timeTxt",
+                      "width": "fill_container",
+                      "fill": "#00000000",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "QuymJ",
+                          "name": "timeLabel",
+                          "fill": "#6F6A63",
+                          "content": "Time",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "soLF9",
+                          "name": "timeValue",
+                          "fill": "#1F1D1A",
+                          "content": "Unscheduled",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "w3gGt",
+                      "width": 16,
+                      "height": 16,
+                      "iconFontName": "chevron-right",
+                      "iconFontFamily": "lucide",
+                      "fill": "#C8C3BB"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "MlhPn",
+              "name": "Location Section",
+              "width": "fill_container",
+              "fill": "#F5F3EE",
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "L7bAH",
+                  "name": "locHeader",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "lHKTE",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "map-pin",
+                      "iconFontFamily": "lucide",
+                      "fill": "#1F1D1A"
+                    },
+                    {
+                      "type": "text",
+                      "id": "O1KDFB",
+                      "name": "locLabel",
+                      "fill": "#1F1D1A",
+                      "content": "Work Location",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "LDqCJ",
+                  "name": "locInput",
+                  "width": "fill_container",
+                  "height": 52,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 16,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#E5DFD4"
+                  },
+                  "gap": 10,
+                  "padding": [
+                    0,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "sF2gw",
+                      "width": 16,
+                      "height": 16,
+                      "iconFontName": "map-pin",
+                      "iconFontFamily": "lucide",
+                      "fill": "#C8C3BB"
+                    },
+                    {
+                      "type": "text",
+                      "id": "YFkOn",
+                      "name": "locPH",
+                      "fill": "#C8C3BB",
+                      "content": "Work location",
                       "fontFamily": "Inter",
                       "fontSize": 15,
                       "fontWeight": "normal"
@@ -20283,47 +20723,6 @@
                 },
                 {
                   "type": "frame",
-                  "id": "XkPGa",
-                  "name": "addrInput",
-                  "width": "fill_container",
-                  "height": 52,
-                  "fill": "#FFFFFF",
-                  "cornerRadius": 16,
-                  "stroke": {
-                    "align": "inside",
-                    "thickness": 1,
-                    "fill": "#E5DFD4"
-                  },
-                  "gap": 10,
-                  "padding": [
-                    0,
-                    16
-                  ],
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "icon_font",
-                      "id": "hhRmj",
-                      "width": 16,
-                      "height": 16,
-                      "iconFontName": "map-pin",
-                      "iconFontFamily": "lucide",
-                      "fill": "#C8C3BB"
-                    },
-                    {
-                      "type": "text",
-                      "id": "j1ucHK",
-                      "name": "addrPH",
-                      "fill": "#C8C3BB",
-                      "content": "Address",
-                      "fontFamily": "Inter",
-                      "fontSize": 15,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
                   "id": "YvD02",
                   "name": "mobileInput",
                   "width": "fill_container",
@@ -20374,8 +20773,8 @@
             },
             {
               "type": "frame",
-              "id": "UUqvE",
-              "name": "Schedule Section",
+              "id": "YPUEJ",
+              "name": "Price Section",
               "width": "fill_container",
               "fill": "#F5F3EE",
               "layout": "vertical",
@@ -20383,19 +20782,47 @@
               "padding": 16,
               "children": [
                 {
-                  "type": "text",
-                  "id": "fIiZm",
-                  "name": "schedLabel",
-                  "fill": "#1F1D1A",
-                  "content": "Schedule",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "700"
+                  "type": "frame",
+                  "id": "Qu6DD",
+                  "name": "priceHeader",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "kU3Sk",
+                      "width": 16,
+                      "height": 16,
+                      "iconFontName": "file-text",
+                      "iconFontFamily": "lucide",
+                      "fill": "#1F1D1A"
+                    },
+                    {
+                      "type": "text",
+                      "id": "cmID8",
+                      "name": "priceLabel",
+                      "fill": "#1F1D1A",
+                      "content": "Price",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "HFb7n",
+                      "name": "hSpacer",
+                      "width": "fill_container",
+                      "height": 1,
+                      "fill": "#00000000"
+                    }
+                  ]
                 },
                 {
                   "type": "frame",
-                  "id": "Gjd6y",
-                  "name": "dateInput",
+                  "id": "AmLy9",
+                  "name": "priceCard",
                   "width": "fill_container",
                   "height": 56,
                   "fill": "#FFFFFF",
@@ -20414,47 +20841,26 @@
                   "children": [
                     {
                       "type": "icon_font",
-                      "id": "LF2UO",
+                      "id": "YIjvL",
                       "width": 18,
                       "height": 18,
-                      "iconFontName": "calendar",
+                      "iconFontName": "file-text",
                       "iconFontFamily": "lucide",
-                      "fill": "#1E6CF2"
+                      "fill": "#C8C3BB"
                     },
                     {
-                      "type": "frame",
-                      "id": "n3AwFc",
-                      "name": "dateTxt",
-                      "width": "fill_container",
-                      "fill": "#00000000",
-                      "layout": "vertical",
-                      "gap": 2,
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "CHRNE",
-                          "name": "dateLabel",
-                          "fill": "#6F6A63",
-                          "content": "Date",
-                          "fontFamily": "Inter",
-                          "fontSize": 11,
-                          "fontWeight": "500"
-                        },
-                        {
-                          "type": "text",
-                          "id": "VpLaz",
-                          "name": "dateValue",
-                          "fill": "#1F1D1A",
-                          "content": "Unscheduled",
-                          "fontFamily": "Inter",
-                          "fontSize": 14,
-                          "fontWeight": "600"
-                        }
-                      ]
+                      "type": "text",
+                      "id": "CDR89",
+                      "name": "pricePH",
+                      "fill": "#C8C3BB",
+                      "content": "Tap to add price",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
                     },
                     {
                       "type": "icon_font",
-                      "id": "B9hjR",
+                      "id": "s6JZuy",
                       "width": 16,
                       "height": 16,
                       "iconFontName": "chevron-right",
@@ -20470,7 +20876,7 @@
               "id": "XfMZE",
               "name": "spacer",
               "width": "fill_container",
-              "height": "fill_container",
+              "height": 16,
               "fill": "#00000000"
             },
             {
@@ -20722,6 +21128,8 @@
                       "id": "d7UAuC",
                       "name": "titlePH",
                       "fill": "#1F1D1A",
+                      "textGrowth": "fixed-width",
+                      "width": 99,
                       "content": "水管修复",
                       "fontFamily": "Inter",
                       "fontSize": 22,
@@ -20746,7 +21154,7 @@
                       "id": "z6gtl",
                       "name": "descPH",
                       "fill": "#6F6A63",
-                      "content": "进行中 · 预计 ¥460",
+                      "content": "进行中 · ¥460",
                       "fontFamily": "Inter",
                       "fontSize": 13,
                       "fontWeight": "normal"
@@ -21459,7 +21867,7 @@
                       "id": "NfWQO",
                       "name": "descPH",
                       "fill": "#6F6A63",
-                      "content": "In Progress · Est. ¥460",
+                      "content": "In Progress · $460",
                       "fontFamily": "Inter",
                       "fontSize": 13,
                       "fontWeight": "normal"
@@ -21940,6 +22348,1119 @@
           ]
         }
       ]
+    },
+    {
+      "type": "frame",
+      "id": "dNOFS",
+      "x": 1680,
+      "y": -2601,
+      "name": "价格详情 CN",
+      "clip": true,
+      "width": 390,
+      "height": 844,
+      "fill": "#F5F3EE",
+      "cornerRadius": 40,
+      "stroke": {
+        "align": "inside",
+        "thickness": 1,
+        "fill": "#1F1D1A"
+      },
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "cEC97",
+          "x": 0,
+          "y": 0,
+          "name": "Status Bar",
+          "width": 390,
+          "height": 62,
+          "fill": "#F5F3EE",
+          "padding": [
+            0,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "KPBOG",
+              "fill": "#1F1D1A",
+              "content": "9:41",
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "JLC8l",
+              "name": "sbIcons",
+              "width": "fit_content(0)",
+              "height": "fit_content(0)",
+              "fill": "#00000000",
+              "gap": 6,
+              "alignItems": "center"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "aB6WW",
+          "x": 0,
+          "y": 62,
+          "name": "Content",
+          "width": 390,
+          "height": 782,
+          "fill": "#F5F3EE",
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "XGkdR",
+              "name": "Header",
+              "width": "fill_container",
+              "height": 56,
+              "fill": "#F5F3EE",
+              "padding": [
+                0,
+                20
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "l6c1S",
+                  "width": 22,
+                  "height": 22,
+                  "iconFontName": "arrow-left",
+                  "iconFontFamily": "lucide",
+                  "fill": "#1F1D1A"
+                },
+                {
+                  "type": "text",
+                  "id": "OER4P",
+                  "name": "title",
+                  "fill": "#1F1D1A",
+                  "content": "价格详情",
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "icon_font",
+                  "id": "kEgid",
+                  "width": 22,
+                  "height": 22,
+                  "iconFontName": "check",
+                  "iconFontFamily": "lucide",
+                  "fill": "#1E6CF2"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Xz35q",
+              "name": "HeroWrap",
+              "width": "fill_container",
+              "fill": "#F5F3EE",
+              "layout": "vertical",
+              "gap": 12,
+              "padding": [
+                12,
+                16,
+                8,
+                16
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "RRxkx",
+                  "name": "TotalHero",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 20,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": 24,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "iSuQv",
+                      "name": "heroLabel",
+                      "fill": "#6F6A63",
+                      "content": "预计总价",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "OmIP2",
+                      "name": "heroAmount",
+                      "fill": "#1E6CF2",
+                      "content": "¥ 460",
+                      "fontFamily": "Inter",
+                      "fontSize": 36,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "EqXtx",
+                  "name": "ImportCard",
+                  "width": "fill_container",
+                  "height": 52,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#1E6CF2"
+                  },
+                  "gap": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "wwUpj",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "file-text",
+                      "iconFontFamily": "lucide",
+                      "fill": "#1E6CF2"
+                    },
+                    {
+                      "type": "text",
+                      "id": "EhLrJ",
+                      "name": "importLabel",
+                      "fill": "#1E6CF2",
+                      "content": "从报价单导入",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Muu5t",
+              "name": "Items Section",
+              "width": "fill_container",
+              "fill": "#F5F3EE",
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "XwLOS",
+                  "name": "itemsHeader",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "g9aRJz",
+                      "name": "itemsLabel",
+                      "fill": "#1F1D1A",
+                      "content": "价格明细",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "czepH",
+                      "name": "hSpacer",
+                      "width": "fill_container",
+                      "height": 1,
+                      "fill": "#00000000"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dysVB",
+                      "name": "addBtn",
+                      "fill": "#EBF0FF",
+                      "cornerRadius": 10,
+                      "gap": 4,
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "HSIri",
+                          "width": 14,
+                          "height": 14,
+                          "iconFontName": "plus",
+                          "iconFontFamily": "lucide",
+                          "fill": "#1E6CF2"
+                        },
+                        {
+                          "type": "text",
+                          "id": "l4nvC9",
+                          "name": "addBtnTxt",
+                          "fill": "#1E6CF2",
+                          "content": "添加",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "T9g8O3",
+                  "name": "item1",
+                  "width": "fill_container",
+                  "height": 60,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#E5DFD4"
+                  },
+                  "gap": 12,
+                  "padding": [
+                    0,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "O9BIl",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "wrench",
+                      "iconFontFamily": "lucide",
+                      "fill": "#1E6CF2"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "TZZMT",
+                      "name": "item1txt",
+                      "width": "fill_container",
+                      "fill": "#00000000",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "E0Mk3",
+                          "fill": "#1F1D1A",
+                          "content": "水管修复服务",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "mjzzH",
+                          "fill": "#6F6A63",
+                          "content": "×1 · 单价 ¥300",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "JwlbF",
+                      "name": "item1amt",
+                      "fill": "#1F1D1A",
+                      "content": "¥300",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "j2yrf",
+                  "name": "item2",
+                  "width": "fill_container",
+                  "height": 60,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#E5DFD4"
+                  },
+                  "gap": 12,
+                  "padding": [
+                    0,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "NrGeh",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "package",
+                      "iconFontFamily": "lucide",
+                      "fill": "#1E6CF2"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "GtEv1",
+                      "name": "item2txt",
+                      "width": "fill_container",
+                      "fill": "#00000000",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "lT3NO",
+                          "fill": "#1F1D1A",
+                          "content": "材料费",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Ele1X",
+                          "fill": "#6F6A63",
+                          "content": "×2 · 单价 ¥80",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "kZua1",
+                      "name": "item2amt",
+                      "fill": "#1F1D1A",
+                      "content": "¥160",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "VRaS5",
+                  "name": "addItemCard",
+                  "width": "fill_container",
+                  "height": 52,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#E5DFD4"
+                  },
+                  "gap": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "d0ecL",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "plus",
+                      "iconFontFamily": "lucide",
+                      "fill": "#C8C3BB"
+                    },
+                    {
+                      "type": "text",
+                      "id": "c4UWUR",
+                      "fill": "#C8C3BB",
+                      "content": "添加项目",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "R5byrh",
+              "name": "TotalRow",
+              "width": "fill_container",
+              "fill": "#F5F3EE",
+              "padding": [
+                8,
+                20
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "AndiN",
+                  "name": "totalLabel",
+                  "fill": "#1F1D1A",
+                  "content": "合计",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "suF5r",
+                  "name": "totalAmt",
+                  "fill": "#1E6CF2",
+                  "content": "¥ 460",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "F871la",
+              "name": "spacer",
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": "#00000000"
+            },
+            {
+              "type": "frame",
+              "id": "T5z93h",
+              "name": "saveArea",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#E5DFD4"
+              },
+              "padding": [
+                12,
+                16,
+                24,
+                16
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Aseos",
+                  "name": "saveBtn",
+                  "width": "fill_container",
+                  "height": 52,
+                  "fill": "#1E6CF2",
+                  "cornerRadius": 14,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "VmHUa",
+                      "fill": "#FFFFFF",
+                      "content": "确认价格",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "mmjY5",
+      "x": 1680,
+      "y": -2641,
+      "name": "Screen Title Pricing CN",
+      "fill": "#1F1D1A",
+      "content": "价格详情 · Price Detail",
+      "fontFamily": "Inter",
+      "fontSize": 16,
+      "fontWeight": "600"
+    },
+    {
+      "type": "frame",
+      "id": "L35NU3",
+      "x": 2170,
+      "y": -2601,
+      "name": "Price Detail EN",
+      "clip": true,
+      "width": 390,
+      "height": 844,
+      "fill": "#F5F3EE",
+      "cornerRadius": 40,
+      "stroke": {
+        "align": "inside",
+        "thickness": 1,
+        "fill": "#1F1D1A"
+      },
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "QFfqS",
+          "x": 0,
+          "y": 0,
+          "name": "Status Bar",
+          "width": 390,
+          "height": 62,
+          "fill": "#F5F3EE",
+          "padding": [
+            0,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "RizV0",
+              "fill": "#1F1D1A",
+              "content": "9:41",
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "nls1H",
+              "name": "sbIcons",
+              "width": "fit_content(0)",
+              "height": "fit_content(0)",
+              "fill": "#00000000",
+              "gap": 6,
+              "alignItems": "center"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "gE5Vf",
+          "x": 0,
+          "y": 62,
+          "name": "Content",
+          "width": 390,
+          "height": 782,
+          "fill": "#F5F3EE",
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Fjw5h",
+              "name": "Header",
+              "width": "fill_container",
+              "height": 56,
+              "fill": "#F5F3EE",
+              "padding": [
+                0,
+                20
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "FvH53",
+                  "width": 22,
+                  "height": 22,
+                  "iconFontName": "arrow-left",
+                  "iconFontFamily": "lucide",
+                  "fill": "#1F1D1A"
+                },
+                {
+                  "type": "text",
+                  "id": "rfYAQ",
+                  "name": "title",
+                  "fill": "#1F1D1A",
+                  "content": "Price Detail",
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "icon_font",
+                  "id": "tcJjH",
+                  "width": 22,
+                  "height": 22,
+                  "iconFontName": "check",
+                  "iconFontFamily": "lucide",
+                  "fill": "#1E6CF2"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "M0joMD",
+              "name": "HeroWrap",
+              "width": "fill_container",
+              "fill": "#F5F3EE",
+              "layout": "vertical",
+              "gap": 12,
+              "padding": [
+                12,
+                16,
+                8,
+                16
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "yYTFI",
+                  "name": "TotalHero",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 20,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": 24,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "VGh5J",
+                      "name": "heroLabel",
+                      "fill": "#6F6A63",
+                      "content": "Estimated Total",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "yrw4P",
+                      "name": "heroAmount",
+                      "fill": "#1E6CF2",
+                      "content": "$ 460",
+                      "fontFamily": "Inter",
+                      "fontSize": 36,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "a6mivQ",
+                  "name": "ImportCard",
+                  "width": "fill_container",
+                  "height": 52,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#1E6CF2"
+                  },
+                  "gap": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "f5qJ2",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "file-text",
+                      "iconFontFamily": "lucide",
+                      "fill": "#1E6CF2"
+                    },
+                    {
+                      "type": "text",
+                      "id": "KmTcz",
+                      "name": "importLabel",
+                      "fill": "#1E6CF2",
+                      "content": "Import from Quote",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "p7SmL",
+              "name": "Items Section",
+              "width": "fill_container",
+              "fill": "#F5F3EE",
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "PWzFb",
+                  "name": "itemsHeader",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ze4OG",
+                      "name": "itemsLabel",
+                      "fill": "#1F1D1A",
+                      "content": "Price Breakdown",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "kZg1r",
+                      "name": "hSpacer",
+                      "width": "fill_container",
+                      "height": 1,
+                      "fill": "#00000000"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "hGOmm",
+                      "name": "addBtn",
+                      "fill": "#EBF0FF",
+                      "cornerRadius": 10,
+                      "gap": 4,
+                      "padding": [
+                        4,
+                        10
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "isjvR",
+                          "width": 14,
+                          "height": 14,
+                          "iconFontName": "plus",
+                          "iconFontFamily": "lucide",
+                          "fill": "#1E6CF2"
+                        },
+                        {
+                          "type": "text",
+                          "id": "qsI1E",
+                          "name": "addBtnTxt",
+                          "fill": "#1E6CF2",
+                          "content": "Add",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "L90XwJ",
+                  "name": "item1",
+                  "width": "fill_container",
+                  "height": 60,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#E5DFD4"
+                  },
+                  "gap": 12,
+                  "padding": [
+                    0,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "vHQMT",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "wrench",
+                      "iconFontFamily": "lucide",
+                      "fill": "#1E6CF2"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "t3gK1f",
+                      "name": "item1txt",
+                      "width": "fill_container",
+                      "fill": "#00000000",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "I7qzT",
+                          "fill": "#1F1D1A",
+                          "content": "Pipe Repair Service",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "v8o8iy",
+                          "fill": "#6F6A63",
+                          "content": "×1 · Unit price ¥300",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "UIXdT",
+                      "name": "item1amt",
+                      "fill": "#1F1D1A",
+                      "content": "$300",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "tdFze",
+                  "name": "item2",
+                  "width": "fill_container",
+                  "height": 60,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#E5DFD4"
+                  },
+                  "gap": 12,
+                  "padding": [
+                    0,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "ZQTJg",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "package",
+                      "iconFontFamily": "lucide",
+                      "fill": "#1E6CF2"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "L1WJX",
+                      "name": "item2txt",
+                      "width": "fill_container",
+                      "fill": "#00000000",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "xpGve",
+                          "fill": "#1F1D1A",
+                          "content": "Materials",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "juUSJ",
+                          "fill": "#6F6A63",
+                          "content": "×2 · Unit price ¥80",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "oqK9i",
+                      "name": "item2amt",
+                      "fill": "#1F1D1A",
+                      "content": "$160",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ejG7W",
+                  "name": "addItemCard",
+                  "width": "fill_container",
+                  "height": 52,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#E5DFD4"
+                  },
+                  "gap": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "o1Z7L",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "plus",
+                      "iconFontFamily": "lucide",
+                      "fill": "#C8C3BB"
+                    },
+                    {
+                      "type": "text",
+                      "id": "wU5zX",
+                      "fill": "#C8C3BB",
+                      "content": "Add item",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "JXD3e",
+              "name": "TotalRow",
+              "width": "fill_container",
+              "fill": "#F5F3EE",
+              "padding": [
+                8,
+                20
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "gsUF5",
+                  "name": "totalLabel",
+                  "fill": "#1F1D1A",
+                  "content": "Total",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "cOAQp",
+                  "name": "totalAmt",
+                  "fill": "#1E6CF2",
+                  "content": "$ 460",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "f4U3Z0",
+              "name": "spacer",
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": "#00000000"
+            },
+            {
+              "type": "frame",
+              "id": "LMPeu",
+              "name": "saveArea",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#E5DFD4"
+              },
+              "padding": [
+                12,
+                16,
+                24,
+                16
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "n4K7OM",
+                  "name": "saveBtn",
+                  "width": "fill_container",
+                  "height": 52,
+                  "fill": "#1E6CF2",
+                  "cornerRadius": 14,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "H7AlIo",
+                      "fill": "#FFFFFF",
+                      "content": "Confirm Price",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "lJvh4",
+      "x": 2170,
+      "y": -2641,
+      "name": "Screen Title Pricing EN",
+      "fill": "#1F1D1A",
+      "content": "价格详情 · Price Detail",
+      "fontFamily": "Inter",
+      "fontSize": 16,
+      "fontWeight": "600"
+    },
+    {
+      "type": "rectangle",
+      "id": "GJlcq",
+      "x": 1569,
+      "y": -2674,
+      "fill": "#faf5f500",
+      "width": 1077,
+      "height": 1011
     }
   ]
 }
